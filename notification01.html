@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LINCO 通知</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="notification">
+    <!-- 首頁區 -->
+    <header class="topbar glassmorphism">
+        
+        <!-- 導覽列 -->
+        <nav class="navigation" id="nav">
+            <!-- Logo區 -->
+            <h1 class="logo">
+                <a href="index.html">
+                    <img src="image/LINCO_logo_dark.svg" alt="LINCO">
+                </a>
+            </h1>
+            <!-- icon按鈕 -->
+            <ul class="menu" id="menu">
+                <li><a href="index.html">首頁</a></li>
+                <li><a href="community.html">社群</a></li>
+                <li><a href="calendar.html">行事曆</a></li>
+            </ul>
+            <div class="nav-right">
+                <form class="search" action="" method="post">
+                    <input type="submit" name="search-btn" id="search-btn" title="送出按鈕" value="">
+                    <input type="search" name="search" id="search" title="搜尋欄位" value="搜尋">
+                </form>
+                
+                <ul class="icon" id="nav-icon">
+                    <li><a href="notification.html" class="icon-message"></a></li>
+                    <li><a href="setting.html" class="icon-setting"></a></li>
+                    <li><a href="user.html" class="icon-user"></a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- 主要內容區 -->
+    <main id="notification">
+        <!-- 訊息通知 -->
+        <section class="MessageTag">
+            <div class="left-panel">
+                <a href="messages.html" class="tab-link" onclick="showContent(event, 'messages'); showWindow(event, 'chat')">聯絡訊息</a>
+                <a href="system-notifications.html" class="tab-link" onclick="showContent(event, 'system-notifications'); showWindow(event, 'system-note')">系統通知</a>
+                <a href="appointment-reminders.html" class="tab-link" onclick="showContent(event, 'appointment-reminders')">預約提醒</a>
+                <a href="notify-others.html" class="tab-link" onclick="showContent(event, 'notify-others')">通知他人</a>
+                <a href="email.html" class="tab-link" onclick="showContent(event, 'email')">電子信箱</a>
+            </div>
+            <div class="right-panel">
+                <div id="messages" class="content">
+                    <div>
+                        <div class="right-panel-list">
+                            <div class="MyNameTitle MyName">
+                                <div class="PostName">
+                                    <figure><img class="posthead"  src="image/posthead01.svg" alt="貼文頭貼"></figure>
+                                    <div id="MyName">
+                                        <h4>Bob Lu</h4>
+                                        <small class="AccountName">@boblu</small>
+                                    </div>
+                                </div>
+                                <a class="more" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" d="M5 10c-1.1 0-2 .9-2 2s.9 2 2 2s2-.9 2-2s-.9-2-2-2m14 0c-1.1 0-2 .9-2 2s.9 2 2 2s2-.9 2-2s-.9-2-2-2m-7 0c-1.1 0-2 .9-2 2s.9 2 2 2s2-.9 2-2s-.9-2-2-2"/></svg></a>
+                            </div>
+                            <form class="search" action="" method="post">
+                                
+                                <input type="submit" name="search-btn" id="search-btn" title="送出按鈕" value=""><input type="search" name="search" id="search" title="搜尋欄位" value="搜尋">
+                            </form>
+                            <h3>訊息</h3><br>
+                            <div class="MessageTitle">
+                                <div class="PostName">
+                                    <figure><img class="headphoto"  src="image/messagephoto01.svg" alt="貼文頭貼"></figure>
+                                    <div id="MyName">
+                                        <h4>Emily</h4>
+                                        <small class="MessageContent">同學，你做報告了嗎？</small>
+                                    </div>
+                                </div>
+                                <div class="time-message">
+                                    <time datetime="">5秒</time>
+                                    <p>1</p>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="MessageTitle">
+                                <div class="PostName">
+                                    <figure><img class="headphoto"  src="image/messagephoto02.svg" alt="貼文頭貼"></figure>
+                                    <div id="MyName">
+                                        <h4>Liam</h4>
+                                        <small class="MessageContent">同學，你上星期有上課嗎？</small>
+                                    </div>
+                                </div>
+                                <div class="time-message">
+                                    <time datetime="">5分</time>
+                                    <p>4</p>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="MessageTitle talking">
+                                <div class="PostName">
+                                    <figure><img class="headphoto"  src="image/messagephoto03.svg" alt="貼文頭貼"></figure>
+                                    <div id="MyName">
+                                        <h4>Meera</h4>
+                                        <small class="MessageContent">想說這久沒聯絡，<br>怎麼會突然找我</small>
+                                    </div>
+                                </div>
+                                <div class="time-message">
+                                    <time datetime="">1小時</time>
+                                    <!-- <p>4</p> -->
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="MessageTitle">
+                                <div class="PostName">
+                                    <figure><img class="headphoto"  src="image/messagephoto04.svg" alt="貼文頭貼"></figure>
+                                    <div id="MyName">
+                                        <h4>Sophia</h4>
+                                        <small class="MessageContent">寫程式好難喔</small>
+                                    </div>
+                                </div>
+                                <div class="time-message">
+                                    <time datetime="">2小時</time>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="MessageTitle">
+                                <div class="PostName">
+                                    <figure><img class="headphoto"  src="image/messagephoto05.svg" alt="貼文頭貼"></figure>
+                                    <div id="MyName">
+                                        <h4>Max</h4>
+                                        <small class="MessageContent">不要再缺課了！</small>
+                                    </div>
+                                </div>
+                                <div class="time-message">
+                                    <time datetime="">1天</time>
+                                    
+                                </div>
+                            </div>
+                            <hr>
+                        </div>
+                        <div id="chat" class="chat window right-panel-detail">
+                            <div class="chat-window">
+                                <div class="chat-header">
+                                    <div class="chat-header-person">
+                                        <div class="chat-header-name">
+                                            <figure><img class="postheadphoto"  src="image/messagephoto03.svg" alt="貼文頭貼"></figure>
+                                            <h4 id="MyName">Meera</h4>
+                                        </div>
+                                        <div class="chat-icon">
+                                            <a class="phone" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 32 32"><path fill="currentColor" d="M26 29h-.17C6.18 27.87 3.39 11.29 3 6.23A3 3 0 0 1 5.76 3h5.51a2 2 0 0 1 1.86 1.26L14.65 8a2 2 0 0 1-.44 2.16l-2.13 2.15a9.37 9.37 0 0 0 7.58 7.6l2.17-2.15a2 2 0 0 1 2.17-.41l3.77 1.51A2 2 0 0 1 29 20.72V26a3 3 0 0 1-3 3M6 5a1 1 0 0 0-1 1v.08C5.46 12 8.41 26 25.94 27a1 1 0 0 0 1.06-.94v-5.34l-3.77-1.51l-2.87 2.85l-.48-.06c-8.7-1.09-9.88-9.79-9.88-9.88l-.06-.48l2.84-2.87L11.28 5Z"/></svg></a>
+                                            <a class="live-video" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 6H4a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V7a1 1 0 0 0-1-1m7 11l-6-2V9l6-2z"></path></svg></a>
+                                            <a class="more" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" d="M5 10c-1.1 0-2 .9-2 2s.9 2 2 2s2-.9 2-2s-.9-2-2-2m14 0c-1.1 0-2 .9-2 2s.9 2 2 2s2-.9 2-2s-.9-2-2-2m-7 0c-1.1 0-2 .9-2 2s.9 2 2 2s2-.9 2-2s-.9-2-2-2"/></svg></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="chat-messages">
+                                    <!-- 對話內容 -->
+                                    <span class="chat-date"><time>今天</time></span>
+                                    <div class="I-say chat-text">
+                                        <div class="read-time">
+                                            <small class="read">已讀</small>
+                                            <time datetime="">13:30</time>
+                                        </div>
+                                        <p class="text">Hi~~好久不見</p>
+                                        <figure class="myheadphoto">
+                                            <img src="image/posthead01.svg" alt="">
+                                        </figure>
+                                    </div>
+                
+                                    <div class="you-say chat-text">
+                                        <figure class="yourheadphoto">
+                                            <img src="image/posthead03.svg" alt="">
+                                        </figure>
+                                        <p class="text">Hi~真的好久不見了！</p>
+                                        <div class="read-time">
+                                            <small class="read">已讀</small>
+                                            <time datetime="">17:35</time>
+                                        </div>
+                                    </div>
+                                    <div class="you-say chat-text">
+                                        <figure class="yourheadphoto">
+                                            <img src="image/posthead03.svg" alt="">
+                                        </figure>
+                                        <p class="text">怎麼了？</p>
+                                        <div class="read-time">
+                                            <small class="read">已讀</small>
+                                            <time datetime="">17:35</time>
+                                        </div>
+                                    </div>
+                                    <div class="you-say chat-text">
+                                        <figure class="yourheadphoto">
+                                            <img src="image/posthead03.svg" alt="">
+                                        </figure>
+                                        <p class="text">你......該不會下一句是.......</p>
+                                        <div class="read-time">
+                                            <small class="read">已讀</small>
+                                            <time datetime="">17:35</time>
+                                        </div>
+                                    </div>
+                                    <div class="you-say chat-text">
+                                        <figure class="yourheadphoto">
+                                            <img src="image/posthead03.svg" alt="">
+                                        </figure>
+                                        <p class="text">問我「別說這些了，你有聽過安麗嗎？」</p>
+                                        <div class="read-time">
+                                            <small class="read">已讀</small>
+                                            <time datetime="">17:35</time>
+                                        </div>
+                                    </div>
+                
+                                    <div class="I-say chat-text">
+                                        <div class="read-time">
+                                            <small class="read">已讀</small>
+                                            <time datetime="">17:36</time>
+                                        </div>
+                                        <p class="text">哈哈！笑死我了</p>
+                                        <figure class="myheadphoto">
+                                            <img src="image/posthead01.svg" alt="">
+                                        </figure>
+                                    </div>
+                                    <div class="I-say chat-text">
+                                        <div class="read-time">
+                                            <small class="read">已讀</small>
+                                            <time datetime="">17:36</time>
+                                        </div>
+                                        <p class="text">我想舉辦國小同學會想先問一下大家的意願啦</p>
+                                        <figure class="myheadphoto">
+                                            <img src="image/posthead01.svg" alt="">
+                                        </figure>
+                                    </div>
+                
+                                    <div class="you-say chat-text">
+                                        <figure class="yourheadphoto">
+                                            <img src="image/posthead03.svg" alt="">
+                                        </figure>
+                                        <p class="text">原來如此！！！</p>
+                                        <div class="read-time">
+                                            <small class="read">已讀</small>
+                                            <time datetime="">17:35</time>
+                                        </div>
+                                    </div>
+                                    <div class="you-say chat-text">
+                                        <figure class="yourheadphoto">
+                                            <img src="image/posthead03.svg" alt="">
+                                        </figure>
+                                        <p class="text">想說這久沒聯絡，怎麼會突然找我</p>
+                                        <div class="read-time">
+                                            <small class="read">已讀</small>
+                                            <time datetime="">17:35</time>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="chat-input">
+                                    <div class="chat-input-icon">
+                                        <a class="add" href="#">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M12 6v12m6-6H6"/></svg>
+                                        </a>
+                                        <a class="camera" href="#">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" d="M20 4h-3.17L15 2H9L7.17 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2m0 14H4V6h4.05l1.83-2h4.24l1.83 2H20zM12 7a5 5 0 0 0-5 5a5 5 0 0 0 5 5a5 5 0 0 0 5-5a5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3a3 3 0 0 1 3-3a3 3 0 0 1 3 3a3 3 0 0 1-3 3"/></svg>
+                                        </a>
+                                        <a class="photo" href="#">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M15 8h.01M3 6a3 3 0 0 1 3-3h12a3 3 0 0 1 3 3v12a3 3 0 0 1-3 3H6a3 3 0 0 1-3-3z"/><path d="m3 16l5-5c.928-.893 2.072-.893 3 0l5 5"/><path d="m14 14l1-1c.928-.893 2.072-.893 3 0l3 3"/></g></svg>
+                                        </a>
+                                    </div>
+                                    <input name="text" id="text" title="text" type="text" placeholder="Aa">
+                                    
+                                    <div class="chat-input-icon">
+                                        <button name="submit" id="submit" title="submit" type="button">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 20 20"><path fill="currentColor" d="M2.724 2.053a.5.5 0 0 0-.707.576l1.498 5.618a.5.5 0 0 0 .4.364l6.855 1.142c.279.047.279.447 0 .494l-6.854 1.142a.5.5 0 0 0-.401.364l-1.498 5.618a.5.5 0 0 0 .707.576l15-7.5a.5.5 0 0 0 0-.894z"/></svg>
+                                        </button>
+                                        <a href="#">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><g fill="none" fill-rule="evenodd"><path d="M24 0v24H0V0zM12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035c-.01-.004-.019-.001-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427c-.002-.01-.009-.017-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093c.012.004.023 0 .029-.008l.004-.014l-.034-.614c-.003-.012-.01-.02-.02-.022m-.715.002a.023.023 0 0 0-.027.006l-.006.014l-.034.614c0 .012.007.02.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z"/><path fill="currentColor" d="M19.07 12.01a1 1 0 0 1 .85 1.132A8.004 8.004 0 0 1 13 19.938V21a1 1 0 1 1-2 0v-1.062a8.005 8.005 0 0 1-6.919-6.796a1 1 0 0 1 1.98-.284a6.002 6.002 0 0 0 11.878 0a1 1 0 0 1 1.132-.848ZM12 2a5 5 0 0 1 5 5v5a5 5 0 0 1-10 0V7a5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3v5a3 3 0 1 0 6 0V7a3 3 0 0 0-3-3"/></g></svg>
+                                        </a>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="system-notifications" class="content">
+                    <div>
+                        <div class="right-panel-list">
+                            <div class="MyNameTitle MyName">
+                                <div class="PostName">
+                                    <figure><img class="posthead"  src="image/posthead01.svg" alt="貼文頭貼"></figure>
+                                    <div id="MyName">
+                                        <h4>Bob Lu</h4>
+                                        <small class="AccountName">@boblu</small>
+                                    </div>
+                                </div>
+                                <a class="more" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" d="M5 10c-1.1 0-2 .9-2 2s.9 2 2 2s2-.9 2-2s-.9-2-2-2m14 0c-1.1 0-2 .9-2 2s.9 2 2 2s2-.9 2-2s-.9-2-2-2m-7 0c-1.1 0-2 .9-2 2s.9 2 2 2s2-.9 2-2s-.9-2-2-2"/></svg></a>
+                            </div>
+                            <form class="search" action="" method="post">
+                                
+                                <input type="submit" name="search-btn" id="search-btn" title="送出按鈕" value=""><input type="search" name="search" id="search" title="搜尋欄位" value="搜尋">
+                            </form>
+                            <h3>系統通知</h3><br>
+                            <div class="SystemNoteTitle checking">
+                                <div id="SystemType">
+                                    <h4>版本更新</h4>
+                                    <small class="SystemContent">更新為LINCO 4.0</small>
+                                </div>
+                                <div class="time-message">
+                                    <time datetime="">3週前</time>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="SystemNoteTitle">
+                                <div id="SystemType">
+                                    <h4>版本更新</h4>
+                                    <small class="SystemContent">更新為LINCO 3.6</small>
+                                </div>
+                                <div class="time-message">
+                                    <time datetime="">5月前</time>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="SystemNoteTitle">
+                                <div id="SystemType">
+                                    <h4>版本更新</h4>
+                                    <small class="SystemContent">更新為LINCO 3.2</small>
+                                </div>
+                                <div class="time-message">
+                                    <time datetime="">9月前</time>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="SystemNoteTitle">
+                                <div id="SystemType">
+                                    <h4>版本更新</h4>
+                                    <small class="SystemContent">更新為LINCO 2.6</small>
+                                </div>
+                                <div class="time-message">
+                                    <time datetime="">1年前</time>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="SystemNoteTitle">
+                                <div id="SystemType">
+                                    <h4>版本更新</h4>
+                                    <small class="SystemContent">更新為LINCO 2.4</small>
+                                </div>
+                                <div class="time-message">
+                                    <time datetime="">1年半前</time>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="SystemNoteTitle">
+                                <div id="SystemType">
+                                    <h4>版本更新</h4>
+                                    <small class="SystemContent">更新為LINCO 2.0</small>
+                                </div>
+                                <div class="time-message">
+                                    <time datetime="">2年前</time>
+                                </div>
+                            </div>
+                            <hr>
+                        </div>
+                        <div id="system-note"  class="system-note window right-panel-detail">
+                            <h2><b>系統通知</b></h2><br>
+                            <div>
+                                <p><strong>版本更新</strong></p>
+                                <small>更新為LINCO 4.0</small>
+                                <small>2024/07/06</small>
+                                <br><br><br>
+                                <p><strong>更新內容：</strong></p>
+                                <ul>
+                                    <li>非常直觀的差異對比（保留原頁面的佈局和樣式，高亮差異部分內容）</li>
+                                    <li>可以對圈選內容的變化設定過濾規則，忽略不感興趣去的內容更新</li>
+                                    <li>支持完備的腳本預處理，可以類比操作，自定義數據。</li>
+                                    <li>優化內容過濾機制</li>
+                                    <li>優化內容顯示效果</li>
+                                    <li>修復可是預處理獲取選擇器不準確的BUG</li>
+                                    <li>支持顏色變化檢測</li>
+                                    <li>支持任意定制通知內容</li>
+                                    <li>支持新增/减少匹配條件</li>
+                                    <li>修復自動模式不能保存的bug</li>
+                                    <!-- <li>支持暗黑模式</li>
+                                    <li>修復數位比較的BUG</li>
+                                    <li>通知管道優化&修復多選擇器情况下的微信/郵箱推送內容</li>
+                                    <li>修復選擇器可能遺失的BUG</li>
+                                    <li>支持忽略反復變化的內容</li>
+                                    <li>超時提醒&智慧選擇器</li>
+                                    <li>視覺化預處理支持自動滾動配寘</li>
+                                    <li>支持檢測到變化的時候自動停止並切換到頁面</li>
+                                    <li>部分頁面檢測失敗的問題</li>
+                                    <li>在popup頁面顯示更新列表</li>
+                                    <li>優化靜默模式&修復自定義聲音的BUG</li>
+                                    <li>文字對比模式支持連結顯示&&優化飛書通知消息格式</li>
+                                    <li>檢測間隔支持添加隨機時間</li>
+                                    <li>重構Diff算灋，優化效能和顯示效果</li>
+                                    <li>支持多設備獨立控制</li>
+                                    <li>修復Telegram推送可能失敗的bug</li>
+                                    <li>修復正則匹配BUG</li>
+                                    <li>效能模式</li>
+                                    <li>優化選擇器穩定性</li>
+                                    <li>優化對嵌套iframe的圈選</li> -->
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="appointment-reminders" class="content">
+                    <div>
+                        <div class="right-panel-list">
+                            <div class="MyNameTitle MyName">
+                                <div class="PostName">
+                                    <figure><img class="posthead"  src="image/posthead01.svg" alt="貼文頭貼"></figure>
+                                    <div id="MyName">
+                                        <h4>Bob Lu</h4>
+                                        <small class="AccountName">@boblu</small>
+                                    </div>
+                                </div>
+                                <a class="more" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" d="M5 10c-1.1 0-2 .9-2 2s.9 2 2 2s2-.9 2-2s-.9-2-2-2m14 0c-1.1 0-2 .9-2 2s.9 2 2 2s2-.9 2-2s-.9-2-2-2m-7 0c-1.1 0-2 .9-2 2s.9 2 2 2s2-.9 2-2s-.9-2-2-2"/></svg></a>
+                            </div>
+                            <form class="search" action="" method="post">
+                                
+                                <input type="submit" name="search-btn" id="search-btn" title="送出按鈕" value=""><input type="search" name="search" id="search" title="搜尋欄位" value="搜尋">
+                            </form>
+                            <h3>預約提醒</h3><br><br>
+                            <div>
+                                <div >
+                                    <h4>䕒誼暑期實習</h4>
+                                    <small>結束7月份賓州大學暑期實習來報到。</small>
+                                </div>
+                                <div class="time-message">
+                                    <time datetime="">2024/08/01(1週後)</time>
+                                </div>
+                            </div>
+                            <hr>
+                            <div>
+                                <div >
+                                    <h4>Nagy來台</h4>
+                                    <small>君品酒店 頤宮中餐廳</small>
+                                </div>
+                                <div class="time-message">
+                                    <time datetime="">2024/08/19 18:00(3週後)</time>
+                                </div>
+                            </div>
+                            <hr>
+                            <div>
+                                <div >
+                                    <h4>Vik</h4>
+                                    <small>參訪</small>
+                                </div>
+                                <div class="time-message">
+                                    <time datetime="">2024/08/23 10:00(4週後)</time>
+                                </div>
+                            </div>
+                            <hr>
+                            <div>
+                                <div >
+                                    <h4>Fortnum & Mason 下午茶</h4>
+                                    <small>香港 Fortnum & Mason 下午茶</small>
+                                </div>
+                                <div class="time-message">
+                                    <time datetime="">2024/09/17 14:00</time>
+                                </div>
+                            </div>
+                            <hr>
+                            <div>
+                                <div >
+                                    <h4>Joanna來訪</h4>
+                                    <small>金蓬萊餐廳晚餐</small>
+                                </div>
+                                <div class="time-message">
+                                    <time datetime="">2024/09/21 18:00</time>
+                                </div>
+                            </div>
+                            <hr>
+                            <div>
+                                <div >
+                                    <h4>Shunji教授</h4>
+                                    <small>來台交流</small>
+                                </div>
+                                <div class="time-message">
+                                    <time datetime="">2024/09/23 10:00</time>
+                                </div>
+                            </div>
+                            <hr>
+                        </div>
+                        <div class="window right-panel-detail">
+                            <h2><b>預約提醒</b></h2><br>
+                            <div>
+                                
+                                <ul>
+                                    
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="notify-others" class="content">
+
+                    <div>
+                        <div class="right-panel-list">
+                            <div class="MyNameTitle MyName">
+                                <div class="PostName">
+                                    <figure><img class="posthead"  src="image/posthead01.svg" alt="貼文頭貼"></figure>
+                                    <div id="MyName">
+                                        <h4>Bob Lu</h4>
+                                        <small class="AccountName">@boblu</small>
+                                    </div>
+                                </div>
+                                <a class="more" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" d="M5 10c-1.1 0-2 .9-2 2s.9 2 2 2s2-.9 2-2s-.9-2-2-2m14 0c-1.1 0-2 .9-2 2s.9 2 2 2s2-.9 2-2s-.9-2-2-2m-7 0c-1.1 0-2 .9-2 2s.9 2 2 2s2-.9 2-2s-.9-2-2-2"/></svg></a>
+                            </div>
+                            <form class="search" action="" method="post">
+                                
+                                <input type="submit" name="search-btn" id="search-btn" title="送出按鈕" value=""><input type="search" name="search" id="search" title="搜尋欄位" value="搜尋">
+                            </form>
+                            <h3>通知他人</h3><br><br>
+                            <p>這裡是通知他人的內容。</p><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+                            <!-- <div>
+                                <div >
+                                    <h4>䕒誼暑期實習</h4>
+                                    <small>結束7月份賓州大學暑期實習來報到。</small>
+                                </div>
+                                <div class="time-message">
+                                    <time datetime="">2024/08/01(1週後)</time>
+                                </div>
+                            </div>
+                            <hr>
+                            <div>
+                                <div >
+                                    <h4>Nagy來台</h4>
+                                    <small>君品酒店 頤宮中餐廳</small>
+                                </div>
+                                <div class="time-message">
+                                    <time datetime="">2024/08/19 18:00(3週後)</time>
+                                </div>
+                            </div>
+                            <hr>
+                            <div>
+                                <div >
+                                    <h4>Vik</h4>
+                                    <small>參訪</small>
+                                </div>
+                                <div class="time-message">
+                                    <time datetime="">2024/08/23 10:00(4週後)</time>
+                                </div>
+                            </div>
+                            <hr>
+                            <div>
+                                <div >
+                                    <h4>Fortnum & Mason 下午茶</h4>
+                                    <small>香港 Fortnum & Mason 下午茶</small>
+                                </div>
+                                <div class="time-message">
+                                    <time datetime="">2024/09/17 14:00</time>
+                                </div>
+                            </div>
+                            <hr>
+                            <div>
+                                <div >
+                                    <h4>Joanna來訪</h4>
+                                    <small>金蓬萊餐廳晚餐</small>
+                                </div>
+                                <div class="time-message">
+                                    <time datetime="">2024/09/21 18:00</time>
+                                </div>
+                            </div>
+                            <hr>
+                            <div>
+                                <div >
+                                    <h4>Shunji教授</h4>
+                                    <small>來台交流</small>
+                                </div>
+                                <div class="time-message">
+                                    <time datetime="">2024/09/23 10:00</time>
+                                </div>
+                            </div>
+                            <hr> -->
+                        </div>
+                        <div class="window right-panel-detail">
+                            <h2><b>通知他人</b></h2><br>
+                            <div>
+                                
+                                <ul>
+                                    
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div id="email" class="content">
+                    <div>
+                        <div class="right-panel-list">
+                            <div class="MyNameTitle MyName">
+                                <div class="PostName">
+                                    <figure><img class="posthead"  src="image/posthead01.svg" alt="貼文頭貼"></figure>
+                                    <div id="MyName">
+                                        <h4>Bob Lu</h4>
+                                        <small class="AccountName">@boblu</small>
+                                    </div>
+                                </div>
+                                <a class="more" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" d="M5 10c-1.1 0-2 .9-2 2s.9 2 2 2s2-.9 2-2s-.9-2-2-2m14 0c-1.1 0-2 .9-2 2s.9 2 2 2s2-.9 2-2s-.9-2-2-2m-7 0c-1.1 0-2 .9-2 2s.9 2 2 2s2-.9 2-2s-.9-2-2-2"/></svg></a>
+                            </div>
+                            <form class="search" action="" method="post">
+                                
+                                <input type="submit" name="search-btn" id="search-btn" title="送出按鈕" value=""><input type="search" name="search" id="search" title="搜尋欄位" value="搜尋">
+                            </form>
+                            <h3>電子信箱</h3><br><br>
+                            <p>這裡是電子信箱的內容。</p><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+                            
+                        </div>
+                        <div class="window right-panel-detail">
+                            <h2><b>電子信箱</b></h2><br>
+                            <div>
+                                
+                                <ul>
+                                    
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 頁尾區 -->
+    <footer>
+        <form class="follow" method="post">
+            <input type="email" name="email" id="email" value="  輸入email以獲得最新消息 ...">
+            <input type="submit" name="follow-btn" id="follow-btn" value="追蹤">
+        </form>
+        
+        <hr>
+        <div class="footer-menu">
+            <ul class="index">
+                <li><a href="#"></a><h3>首頁</h3></li>
+                <li><a href="#"></a>數位名片</li>
+                <li><a href="#"></a>社群整合</li>
+                <li><a href="#"></a>行事曆功能</li>
+                <li><a href="#"></a>自訂化功能</li>
+                <li><a href="#"></a>跨平台支援</li>
+                <li><a href="#"></a> 安全性＆隱私保護</li>
+            </ul>
+            <ul class="community-menu">
+                <li><a href="#"></a><h3>社群</h3></li>
+                <li><a href="#"></a>動態消息</li>
+                <li><a href="#"></a>社團</li>
+                <li><a href="#"></a>聯絡人</li>
+                <li><a href="#"></a>推薦商家</li>
+                <li><a href="#"></a>廣告</li>
+            </ul>
+            <ul class="calendar-menu">
+                <li><a href="#"></a><h3>行事曆</h3></li>
+                <li><a href="#"></a>共同活動</li>
+                <li><a href="#"></a>預約服務</li>
+                <li><a href="#"></a>定期追蹤</li>
+                <li><a href="#"></a>紀念日</li>
+                <li><a href="#"></a>開會</li>
+            </ul>
+            <div>
+                <div class="download">
+                    <h3>下載</h3>
+                    <ul class="store">
+                        <li><a class="icon-appstore" href="#"></a></li>
+                        <li><a class="icon-googleplay" href="#"></a></li>
+                    </ul>
+                </div>
+                
+                <div class="link">
+                    <h3>相關連結</h3>
+                    <ul class="icon">
+                        <li><a class="icon-fb-white" href="#"></a></li>
+                        <li><a class="icon-linkedin-white" href="#"></a></li><li><a class="icon-ig-white" href="#"></a></li>
+                        <li><a class="icon-line-white" href="#"></a></li>
+                    </ul>
+                </div>
+                
+            </div>
+            
+        </div>
+        <hr>
+        <div>
+
+        </div>
+        <small>LINCO @ 2024. All rights reserved.</small>
+    </footer>
+    <script>
+
+        function showContent(event, contentId) {
+            var i, tablinks, content, window;
+            content = document.getElementsByClassName("content");
+            for (i = 0; i < content.length; i++) {
+                content[i].classList.remove("active");
+            }
+            tablinks = document.getElementsByClassName("tab-link");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].classList.remove("active");
+            }
+            document.getElementById(contentId).classList.add("active");
+            event.currentTarget.classList.add("active");
+        }
+        function showWindow(event, windowId) {
+            var i, tablinks, window;
+            tablinks = document.getElementsByClassName("tab-link");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].classList.remove("active");
+            }
+            window = document.getElementsByClassName("window");
+            for (i = 0; i < window.length; i++) {
+                window[i].classList.remove("active");
+            }
+            document.getElementById(contentId).classList.add("active");
+            event.currentTarget.classList.add("active");
+        }
+
+
+        </script>
+</body>
+</html>
