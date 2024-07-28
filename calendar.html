@@ -184,22 +184,24 @@
                     </table>
                 </div>
                 <div id="schedule">
-                    <div class="schedule" id="today">
-                        <h4>今日行程</h4>
-                        <ol>
-                            <li>
-                                <small>晨會</small>
-                                <time datetime="">08:00</time>
-                            </li>
-                            <li>
-                                <small>廠商：仁寶來訪</small>
-                                <time datetime="">10:00</time>
-                            </li>
-                            <li>
-                                <small>餐會</small>
-                                <time datetime="">12:00</time>
-                            </li>
-                        </ol>
+                    <div >
+                        <details class="schedule" id="today">
+                            <summary>今日行程</summary>
+                            <ol>
+                                <li>
+                                    <small>晨會</small>
+                                    <time datetime="2024-07-04 08:00">08:00</time>
+                                </li>
+                                <li>
+                                    <small>廠商：仁寶來訪</small>
+                                    <time datetime="2024-07-04 10:00">10:00</time>
+                                </li>
+                                <li>
+                                    <small>餐會</small>
+                                    <time datetime="2024-07-04 12:00">12:00</time>
+                                </li>
+                            </ol>
+                        </details>         
                     </div>
                     <!-- <div id="tomorrow">
                         <h4>明天</h4>
@@ -219,50 +221,63 @@
                             
                         </ol>
                     </div> -->
-                    <div class="schedule" id="co-activity">
-                        <h4>共同活動</h4>
-                        <!-- <ol>
-                            <li>
-                                <small>晨會</small>
-                                <time datetime="">08:00</time>
-                            </li>
-                        </ol> -->
+                    <div>
+                        <details  class="schedule" id="co-activity">
+                            <summary>共同活動</summary>
+                            <ol>
+                                <li>
+                                    <small>晨會</small>
+                                    <time datetime="2024-07-04 08:00">08:00</time>
+                                </li>
+                                <li>
+                                    <small>廠商：仁寶來訪</small>
+                                    <time datetime="2024-07-04 10:00">10:00</time>
+                                </li>
+                                <li>
+                                    <small>餐會</small>
+                                    <time datetime="2024-07-04 12:00">12:00</time>
+                                </li>
+                            </ol>
+                        </details>
                     </div>
-                    <div class="schedule" id="appointment-service">
-                        <h4>預約服務</h4>
-                        <!-- <ol>
-                            <li>
-                                <small>晨會</small>
-                                <time datetime="">08:00</time>
-                            </li>
-                        </ol> -->
+                    <div>
+                        <details  class="schedule" id="appointment-service">
+                            <summary>預約服務</summary>
+                            <ol>
+                                <li><small>今日無預約服務</small></li>
+                            </ol>
+                        </details>
                     </div>
-                    <div class="schedule" id="followup">
-                        <h4>定期追蹤</h4>
-                        <!-- <ol>
-                            <li>
-                                <small>晨會</small>
-                                <time datetime="">08:00</time>
-                            </li>
-                        </ol> -->
+                    <div>
+                        <details class="schedule" id="followup">
+                            <summary>定期追蹤</summary>
+                            <ol>
+                                <li><small>今日無定期追蹤行程</small></li>
+                            </ol>
+                        </details>
                     </div>
-                    <div class="schedule" id="anniversary">
-                        <h4>紀念日</h4>
-                        <!-- <ol>
-                            <li>
-                                <small>晨會</small>
-                                <time datetime="">08:00</time>
-                            </li>
-                        </ol> -->
+                    <div>
+                        <details class="schedule" id="anniversary">
+                            <summary>紀念日</summary>
+                            <ol>
+                                <li><small>今日無紀念日</small></li>
+                            </ol>
+                        </details>
                     </div>
-                    <div class="schedule" id="meeting">
-                        <h4>開會</h4>
-                        <!-- <ol>
-                            <li>
-                                <small>晨會</small>
-                                <time datetime="">08:00</time>
-                            </li>
-                        </ol> -->
+                    <div>
+                        <details class="schedule" id="meeting">
+                            <summary>開會</summary>
+                            <ol>
+                                <li>
+                                    <small>晨會</small>
+                                    <time datetime="2024-07-04 08:00">08:00</time>
+                                </li>
+                                <li>
+                                    <small>廠商：仁寶來訪</small>
+                                    <time datetime="2024-07-04 10:00">10:00</time>
+                                </li>
+                            </ol>
+                        </details>
                     </div>
                 </div>
             </div>
@@ -639,36 +654,6 @@
     </div>
 
     <script>
-        // function generateCalendar(year, month) {
-        //     const daysInWeek = ["日", "一", "二", "三", "四", "五", "六"];
-        //     let html = `<div class="month"><h4 class="month-header">${year}年 ${month + 1}月</h4>`;
-        //     html += '<table>';
-        //     html += '<tr>';
-        //     daysInWeek.forEach(day => {
-        //         html += `<th>${day}</th>`;
-        //     });
-        //     html += '</tr><tr>';
-        
-        //     const firstDay = new Date(year, month, 1).getDay();
-        //     const daysInMonth = new Date(year, month + 1, 0).getDate();
-        
-        //     for (let i = 0; i < firstDay; i++) {
-        //         html += `<td></td>`;
-        //     }
-        
-        //     for (let i = 1; i <= daysInMonth; i++) {
-        //         const dayOfWeek = new Date(year, month, i).getDay();
-        //         const weekendClass = dayOfWeek === 0 || dayOfWeek === 6 ? 'weekend' : '';
-        //         html += `<td class="${weekendClass}">${i}</td>`;
-        //         if (dayOfWeek === 6 && i !== daysInMonth) {
-        //             html += '</tr><tr>';
-        //         }
-        //     }
-        
-        //     html += '</tr></table></div>';
-        //     return html;
-        // }
-        
         document.addEventListener("DOMContentLoaded", () => {
             const container = document.querySelector('#calendar2024');
             for (let month = 0; month < 12; month++) {
