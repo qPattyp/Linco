@@ -2818,11 +2818,11 @@ input::placeholder{
     background-color: var(--blue01);
 }
 /* 系統通知 */
-.system-note {
+/* .system-note {
     width: 70%;
     margin: 0 20px;
     border-radius: 20px;
-}
+} */
 /* 預約提醒 */
 .time-message-riminder, .time-message-notify {
     justify-self: flex-end;
